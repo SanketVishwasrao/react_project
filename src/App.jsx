@@ -1,7 +1,12 @@
+import KgButton from "./KgButton";
+
 function App() {
-    return <h1>
-        This is the best React course
-    </h1>
+    return <div>
+        <h1>
+            This is the best React course
+        </h1>
+        <KgButton></KgButton>
+    </div> 
 }
 
 export default App;
