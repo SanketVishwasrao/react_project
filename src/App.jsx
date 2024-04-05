@@ -1,9 +1,9 @@
 import './App.css';
+import Container from './components/Container';
 import FoodItems from './components/FoodItems';
 
 function App () {
-
-  let foodItems = ['Sabzi', 'Green Vegetable', 'Roti', 'Salad', 'Milk', 'Ghee']
+  let foodItems = ['Sabzi', 'Green Vegetable', 'Roti', 'Salad', 'Milk', 'Ghee'];
   // let foodItems = []
 
   // if (foodItems.length === 0) {
@@ -14,7 +14,8 @@ function App () {
 
   return (
     <>
-      <h1 className='food-heading'>Healthy Food</h1>
+    <Container>
+      <h1 className="food-heading">Healthy Food</h1>
       {/* <ul class="list-group">
         <li class="list-group-item">Dal</li>
         <li class="list-group-item">Green Vegetable</li>
@@ -32,7 +33,14 @@ function App () {
       {/* <FoodItems /> */}
 
       <FoodItems items={foodItems} />
-      </>
+    </Container>
+
+    {/* <Container>
+      <p>Above is the list of healthy foods that are good for
+        your health and well being.
+      </p>
+    </Container> */}
+    </>
   );
 }
 
