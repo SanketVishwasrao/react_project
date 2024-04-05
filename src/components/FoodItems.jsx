@@ -1,15 +1,16 @@
 import ErrorMessage from "./ErrorMessage";
+import Item from "./Item";
 
-const FoodItems = () => {
+const FoodItems = ({ items }) => {
 //   let foodItems = ['Dal', 'Green Vegetable', 'Roti', 'Salad', 'Milk', 'Ghee'];
-    let foodItems = []
+    // let foodItems = []
 
   return (
     <>
-    {foodItems.length === 0 && <ErrorMessage />}
+    {items.length === 0 && <ErrorMessage />}
     <ul className="list-group">
-      {foodItems.map (item => (
-        <li key={item} className="list-group-item">{item}</li>
+      {items.map (item => (
+        <Item key={item} foodItem={item} />
       ))}
     </ul>
     </>
