@@ -15,11 +15,18 @@ function App () {
   // let emptyMessage = foodItems.length === 0 ? <h3>I am still hungry.</h3> : null
 
   let [textToShow, setTextToShow] = useState("Food Item Entered by user");
-  let [foodItems, setFoodItems] = useState(['Sabzi', 'Green Vegetable', 'Roti']);
+  let [foodItems, setFoodItems] = useState([]);
 
   const handleOnChange = event => {
-    // console.log (event.target.value);
-    setTextToShow(event.target.value);
+    // console.log (event.key);
+    if (event.key === 'Enter') {
+      let newFoodItem = event.target.value
+      event.target.value = ""
+      let newItems = [...foodItems, newFoodItem]
+      setFoodItems(newItems)
+      // console.log("Food value entered is " + newFoodItem)
+    }
+    // setTextToShow(event.target.value);
   };
 
   return (

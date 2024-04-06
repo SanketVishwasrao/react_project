@@ -11,7 +11,8 @@ const FoodInput = ({handleOnChange}) => {
       placeholder="Enter Food Item here"
       className={styles.foodInput}
       //   onChange={event => console.log (event.target.value)}
-      onChange={handleOnChange}
+      //   onChange={handleOnChange}
+      onKeyDown={handleOnChange}
     />
   );
 };
